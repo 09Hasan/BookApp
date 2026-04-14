@@ -13,18 +13,10 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowMaterialGrid: false,
+      debugShowCheckedModeBanner: false,
+      // debugShowMaterialGrid: false,
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor),
       home: SplashView(),
     );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }

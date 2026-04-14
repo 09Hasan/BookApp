@@ -1,11 +1,9 @@
 import 'package:booklyapp/constants.dart';
-import 'package:booklyapp/feature/Splash/presentation/views/splash_view.dart';
 import 'package:booklyapp/feature/Splash/presentation/widgets/sliding_text.dart';
-import 'package:booklyapp/main.dart';
+import 'package:booklyapp/feature/homePage/presentation/view/home_page.dart';
 // import 'package:booklyapp/feature/Splash/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_utils/src/extensions/duration_extensions.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
