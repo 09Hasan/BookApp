@@ -1,5 +1,7 @@
 import 'package:booklyapp/constants.dart';
+import 'package:booklyapp/feature/Splash/presentation/views/splash_view.dart';
 import 'package:booklyapp/feature/Splash/presentation/widgets/sliding_text.dart';
+import 'package:booklyapp/main.dart';
 // import 'package:booklyapp/feature/Splash/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,6 +22,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initAnimation();
+    transtionToHomePage();
   }
 
   @override
@@ -53,7 +56,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       duration: Duration(seconds: 1),
     );
     slidingText = Tween<Offset>(
-      begin: Offset(0, 5),
+      begin: Offset(0, 4),
       end: Offset.zero,
     ).animate(animationController);
     animationController.forward();
@@ -61,5 +64,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
     // slidingText.addListener(() {
     //   setState(() {});
     // });
+  }
+
+  void transtionToHomePage() {
+    Future.delayed(kTranstionDuration, () {
+      Get.to(HomePage(), transition: Transition.downToUp);
+      // Get.off(SplashView());
+      // Get.offAndToNamed('',t);
+    });
   }
 }
