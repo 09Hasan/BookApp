@@ -1,5 +1,8 @@
+import 'package:booklyapp/core/utils/data_assets.dart';
 import 'package:booklyapp/feature/Splash/presentation/widgets/custom_app_bar.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/custom_list_view.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view_with_details.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -9,7 +12,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 24, right: 24),
+        padding: EdgeInsets.only(
+          left: MediaQuery.of(context).size.height * 0.02,
+          right: MediaQuery.of(context).size.height * 0.02,
+        ),
         child: Column(
           children: [
             SizedBox(height: MediaQuery.of(context).size.height * 0.04),
@@ -17,6 +23,8 @@ class HomePage extends StatelessWidget {
             SizedBox(height: MediaQuery.of(context).size.height * 0.02),
 
             const CustomListView(),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+            ItemListViewWithDetails(),
           ],
         ),
       ),
