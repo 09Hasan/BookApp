@@ -1,3 +1,4 @@
+import 'package:booklyapp/core/utils/data_assets.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -15,7 +16,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-      Image.asset('assets/images/Logo.png', height: 42),
+        Image.asset(DataAssets.kLogo, height: 42),
         const Spacer(),
         Container(
           decoration: BoxDecoration(
