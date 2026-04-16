@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
 
             const CustomListView(),
             SizedBox(height: MediaQuery.of(context).size.height * 0.015),
-            CustomListViewItemsWithDetails(),
+            const CustomListViewItemsWithDetails(),
           ],
         ),
       ),

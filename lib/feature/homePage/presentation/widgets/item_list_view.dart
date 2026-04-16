@@ -10,7 +10,10 @@ class ItemListView extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: Colors.red,
-        image: const DecorationImage(image: AssetImage(DataAssets.kLogo)),
+        image: const DecorationImage(
+          image: AssetImage(DataAssets.kLogo),
+          fit: BoxFit.contain,
+        ),
       ),
     );
   }
