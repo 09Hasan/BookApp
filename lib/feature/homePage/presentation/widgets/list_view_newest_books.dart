@@ -19,7 +19,7 @@ class ListViewNewestBooks extends StatelessWidget {
               aspectRatio: 2.4 / 3.8,
               child: Stack(
                 children: [
-                  ItemListView(),
+                  const ItemListView(),
                   Positioned(
                     right: 10,
                     bottom: 5,
@@ -28,7 +28,7 @@ class ListViewNewestBooks extends StatelessWidget {
                       icon: CircleAvatar(
                         radius: 25,
                         backgroundColor: Colors.white.withAlpha(70),
-                        child: Icon(
+                        child: const Icon(
                           Icons.play_arrow,
                           color: Colors.white,
                           size: 22,

@@ -1,5 +1,5 @@
 // import 'package:booklyapp/core/utils/data_assets.dart';
-import 'package:booklyapp/feature/Splash/presentation/widgets/custom_app_bar.dart';
+import 'package:booklyapp/core/widgets/custom_app_bar.dart';
 // import 'package:booklyapp/feature/homePage/presentation/widgets/custom_list_view.dart';
 // import 'package:booklyapp/feature/homePage/presentation/widgets/custom_list_view_items_with_details.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/list_view_details_page.dart';
@@ -13,45 +13,49 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.height * 0.02,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+            const SizedBox(height: 40),
             CustomAppBar(
               icon: Icons.shopping_cart_outlined,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              title: Icon(Icons.close, size: 48),
+              onPressed: () {},
+              title: IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.close, size: 48),
+              ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+            const SizedBox(height: 35),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.35,
-              child: AspectRatio(aspectRatio: 2.4 / 3.8, child: ItemListView()),
+              child: const AspectRatio(
+                aspectRatio: 2.4 / 3.8,
+                child: ItemListView(),
+              ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+            const SizedBox(height: 35),
             Text('ffdsgsgsfg', style: TextStyle(fontSize: 48)),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.005),
+            const SizedBox(height: 6),
 
             Text(
               'dfsgsfgsfg',
               style: TextStyle(fontSize: 28, color: Colors.white54),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.005),
+            const SizedBox(height: 6),
             Text(
               'rate: 4.5  views: 1000',
               style: TextStyle(fontSize: 24, color: Colors.white54),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+            const SizedBox(height: 30),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.075,
-                  width: MediaQuery.of(context).size.width * 0.35,
+                  height: 80,
+                  width: MediaQuery.of(context).size.width * .35,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -71,8 +75,8 @@ class DetailsPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.075,
-                  width: MediaQuery.of(context).size.width * 0.35,
+                  height: 80,
+                  width: MediaQuery.of(context).size.width * .35,
                   decoration: BoxDecoration(
                     color: Colors.orangeAccent,
                     borderRadius: BorderRadius.only(
@@ -89,7 +93,7 @@ class DetailsPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+            const SizedBox(height: 35),
             Row(
               children: [
                 Text(
@@ -102,9 +106,7 @@ class DetailsPage extends StatelessWidget {
                 ),
               ],
             ),
-            ListViewDetailsPage(
-              height: MediaQuery.of(context).size.height * 0.15,
-            ),
+            const ListViewDetailsPage(),
           ],
         ),
       ),
