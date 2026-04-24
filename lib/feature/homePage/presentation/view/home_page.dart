@@ -1,6 +1,7 @@
+import 'package:booklyapp/core/utils/data_assets.dart';
 import 'package:booklyapp/feature/Splash/presentation/widgets/custom_app_bar.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/custom_list_view.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/custom_list_view_items_with_details.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/list_view_newest_books.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/best_seller_list_view.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,19 +11,21 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.only(
-          left: MediaQuery.of(context).size.height * 0.02,
-          right: MediaQuery.of(context).size.height * 0.02,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-            CustomAppBar(icon: Icons.search, onPressed: () {}),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.015),
+            const SizedBox(height: 40),
+            //must to create anthor Custom appbar
+            CustomAppBar(
+              title: Image.asset(DataAssets.kLogo, height: 30),
+              icon: Icons.search,
+              onPressed: () {},
+            ),
+            const SizedBox(height: 16),
 
-            const CustomListView(),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.015),
-            const CustomListViewItemsWithDetails(),
+            const ListViewNewestBooks(),
+            const SizedBox(height: 16),
+            const BestSellerListView(),
           ],
         ),
       ),

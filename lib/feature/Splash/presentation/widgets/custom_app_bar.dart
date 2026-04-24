@@ -1,22 +1,21 @@
-import 'package:booklyapp/core/utils/data_assets.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     super.key,
-    // required this.title,
+    required this.title,
     required this.icon,
     this.onPressed,
   });
 
-  // final String title;
+  final Widget title;
   final IconData icon;
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(DataAssets.kLogo, height: 42),
+        title,
         const Spacer(),
         Container(
           decoration: BoxDecoration(

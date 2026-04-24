@@ -1,8 +1,8 @@
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
 import 'package:flutter/material.dart';
 
-class CustomListView extends StatelessWidget {
-  const CustomListView({super.key});
+class ListViewNewestBooks extends StatelessWidget {
+  const ListViewNewestBooks({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class CustomListView extends StatelessWidget {
                     child: IconButton(
                       onPressed: () {},
                       icon: CircleAvatar(
-                        radius: MediaQuery.of(context).size.height * 0.024,
+                        radius: 25,
                         backgroundColor: Colors.white.withAlpha(70),
                         child: Icon(
                           Icons.play_arrow,

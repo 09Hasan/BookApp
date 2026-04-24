@@ -67,8 +67,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void transtionToHomePage() {
     Future.delayed(kTranstionDuration, () {
       Get.to(HomePage(), transition: Transition.downToUp);
-      // Get.off(SplashView());
-      // Get.offAndToNamed('',t);
+      // Navigator.pop(context);
     });
   }
 }

@@ -1,8 +1,8 @@
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
 import 'package:flutter/material.dart';
 
-class ItemListViewWithDetails extends StatelessWidget {
-  const ItemListViewWithDetails({super.key});
+class ItemListViewBestSeller extends StatelessWidget {
+  const ItemListViewBestSeller({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +34,10 @@ class ItemListViewWithDetails extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(
-                    left: MediaQuery.of(context).size.height * 0.015,
-                    right: MediaQuery.of(context).size.height * 0.021,
-                    bottom: MediaQuery.of(context).size.height * 0.015,
+                  padding: const EdgeInsets.only(
+                    left: 16,
+                    right: 24,
+                    bottom: 16,
                   ),
                   child: Row(
                     children: [
