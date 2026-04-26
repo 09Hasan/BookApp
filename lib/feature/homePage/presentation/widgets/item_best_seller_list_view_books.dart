@@ -1,38 +1,33 @@
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
 import 'package:flutter/material.dart';
 
-class ItemListViewBestSeller extends StatelessWidget {
-  const ItemListViewBestSeller({super.key});
+class ItemBestSellerListView extends StatelessWidget {
+  const ItemBestSellerListView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.2,
+      height: 175,
       child: Row(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.18,
-            child: AspectRatio(aspectRatio: 2.5 / 4, child: ItemListView()),
-          ),
+          ItemListView(),
           Expanded(
             child: Column(
               children: [
                 Expanded(
-                  child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.18,
-                    child: ListTile(
-                      titleAlignment: ListTileTitleAlignment.top,
-                      title: Text(
-                        'titlehfj,hcjcxjgxxxxxxxxxxxxxxxxxxxxxx',
-                        style: TextStyle(fontSize: 32),
-                      ),
-                      subtitle: Text(
-                        'subtitle',
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
+                  child: ListTile(
+                    titleAlignment: ListTileTitleAlignment.top,
+                    title: Text(
+                      'titlehfj,hcjcxjgxxxxxxxxxxxxxxxxxxxxxx',
+                      style: TextStyle(fontSize: 32),
+                    ),
+                    subtitle: Text(
+                      'subtitle',
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ),
                 ),
+              Row(children: [],),
                 Padding(
                   padding: const EdgeInsets.only(
                     left: 16,

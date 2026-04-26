@@ -28,9 +28,11 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  awesome_icons: ^1.1.0
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  font_awesome_icon_class: ^0.0.6
   get: ^4.7.3
 
 dev_dependencies:

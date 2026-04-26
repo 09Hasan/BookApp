@@ -14,30 +14,27 @@ class ListViewNewestBooks extends StatelessWidget {
 
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: AspectRatio(
-              aspectRatio: 2.4 / 3.8,
-              child: Stack(
-                children: [
-                  const ItemListView(),
-                  Positioned(
-                    right: 10,
-                    bottom: 5,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: CircleAvatar(
-                        radius: 25,
-                        backgroundColor: Colors.white.withAlpha(70),
-                        child: const Icon(
-                          Icons.play_arrow,
-                          color: Colors.white,
-                          size: 22,
-                        ),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Stack(
+              children: [
+                const ItemListView(),
+                Positioned(
+                  right: 10,
+                  bottom: 5,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.white.withAlpha(70),
+                      child: const Icon(
+                        Icons.play_arrow,
+                        color: Colors.white,
+                        size: 22,
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           );
         },

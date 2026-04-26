@@ -1,8 +1,8 @@
-import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view_best_seller.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/item_best_seller_list_view_books.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class ListViewBestSeller extends StatelessWidget {
+  const ListViewBestSeller({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,12 +11,14 @@ class BestSellerListView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text('Best Seller', style: Theme.of(context).textTheme.headlineLarge),
-          // SizedBox(height: MediaQuery.of(context).size.height * 0.0001),
           Expanded(
             child: ListView.builder(
               itemCount: 5,
               itemBuilder: (context, index) {
-                return ItemListViewBestSeller();
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 5.0),
+                  child: const ItemBestSellerListView(),
+                );
               },
             ),
           ),

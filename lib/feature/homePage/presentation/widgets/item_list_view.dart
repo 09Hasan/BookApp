@@ -13,13 +13,16 @@ class ItemListView extends StatelessWidget {
         Get.to(() => const DetailsPage());
       },
 
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: Colors.red,
-          image: const DecorationImage(
-            image: AssetImage(DataAssets.kLogo),
-            fit: BoxFit.contain,
+      child: AspectRatio(
+        aspectRatio: 2.4 / 3.8,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: Colors.red,
+            image: const DecorationImage(
+              image: AssetImage(DataAssets.kLogo),
+              fit: BoxFit.contain,
+            ),
           ),
         ),
       ),

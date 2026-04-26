@@ -1,9 +1,9 @@
-// import 'package:booklyapp/core/utils/data_assets.dart';
 import 'package:booklyapp/core/widgets/custom_app_bar.dart';
-// import 'package:booklyapp/feature/homePage/presentation/widgets/custom_list_view.dart';
-// import 'package:booklyapp/feature/homePage/presentation/widgets/custom_list_view_items_with_details.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/list_view_details_page.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/books_action.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/custom_action_button.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/list_view_smaller.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/book_rating.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPage extends StatelessWidget {
@@ -36,63 +36,22 @@ class DetailsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 35),
-            Text('ffdsgsgsfg', style: TextStyle(fontSize: 48)),
+            const Text('ffdsgsgsfg', style: TextStyle(fontSize: 48)),
             const SizedBox(height: 6),
 
-            Text(
+            const Text(
               'dfsgsfgsfg',
               style: TextStyle(fontSize: 28, color: Colors.white54),
             ),
             const SizedBox(height: 6),
-            Text(
-              'rate: 4.5  views: 1000',
-              style: TextStyle(fontSize: 24, color: Colors.white54),
-            ),
-            const SizedBox(height: 30),
+            // const Text(
+            //   'rate: 4.5  views: 1000',
+            //   style: TextStyle(fontSize: 24, color: Colors.white54),
+            // ),
+            const BookRating(),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 80,
-                  width: MediaQuery.of(context).size.width * .35,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(16),
-                      bottomLeft: Radius.circular(16),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      '19.99\$',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  height: 80,
-                  width: MediaQuery.of(context).size.width * .35,
-                  decoration: BoxDecoration(
-                    color: Colors.orangeAccent,
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(16),
-                      bottomRight: Radius.circular(16),
-                    ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Buy',
-                      style: TextStyle(color: Colors.white, fontSize: 28),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            const SizedBox(height: 30),
+            const BooksAction(),
             const SizedBox(height: 35),
             Row(
               children: [
@@ -106,7 +65,7 @@ class DetailsPage extends StatelessWidget {
                 ),
               ],
             ),
-            const ListViewDetailsPage(),
+            const ListViewSmaller(),
           ],
         ),
       ),
