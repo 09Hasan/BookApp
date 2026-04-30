@@ -1,3 +1,4 @@
+import 'package:booklyapp/feature/homePage/presentation/widgets/book_rating.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class ItemBestSellerListView extends StatelessWidget {
     return SizedBox(
       height: 175,
       child: Row(
-        children: [
+        children: const [
           ItemListView(),
           Expanded(
             child: Column(
@@ -18,16 +19,17 @@ class ItemBestSellerListView extends StatelessWidget {
                   child: ListTile(
                     titleAlignment: ListTileTitleAlignment.top,
                     title: Text(
-                      'titlehfj,hcjcxjgxxxxxxxxxxxxxxxxxxxxxx',
+                      'titlehfj,',
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(fontSize: 32),
                     ),
                     subtitle: Text(
                       'subtitle',
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      // style: Theme.of(context).textTheme.bodyMedium,
                     ),
                   ),
                 ),
-              Row(children: [],),
                 Padding(
                   padding: const EdgeInsets.only(
                     left: 16,
@@ -38,7 +40,7 @@ class ItemBestSellerListView extends StatelessWidget {
                     children: [
                       Text('Price: \$19.99'),
                       Spacer(flex: 1),
-                      Text('Rating: 4.5  ||  Views: 1000'),
+                      BookRating(),
                     ],
                   ),
                 ),

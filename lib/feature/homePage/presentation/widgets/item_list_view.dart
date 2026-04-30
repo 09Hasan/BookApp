@@ -8,21 +8,15 @@ class ItemListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Get.to(() => const DetailsPage());
-      },
-
-      child: AspectRatio(
-        aspectRatio: 2.4 / 3.8,
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
-            color: Colors.red,
-            image: const DecorationImage(
-              image: AssetImage(DataAssets.kLogo),
-              fit: BoxFit.contain,
-            ),
+    return AspectRatio(
+      aspectRatio: 2.4 / 3.8,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: Colors.red,
+          image: const DecorationImage(
+            image: AssetImage(DataAssets.kLogo),
+            fit: BoxFit.contain,
           ),
         ),
       ),
