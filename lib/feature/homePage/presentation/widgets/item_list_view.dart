@@ -1,7 +1,5 @@
 import 'package:booklyapp/core/utils/data_assets.dart';
-import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 class ItemListView extends StatelessWidget {
   const ItemListView({super.key});
