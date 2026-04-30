@@ -1,3 +1,4 @@
+import 'package:booklyapp/constants.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/book_rating.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,10 @@ class ItemBestSellerListView extends StatelessWidget {
                       'titlehfj,',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(fontSize: 32),
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontFamily: kGTSectraFontFamily,
+                      ),
                     ),
                     subtitle: Text(
                       'subtitle',
