@@ -9,27 +9,21 @@ class ListViewBestSeller extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Best Seller', style: Theme.of(context).textTheme.headlineLarge),
-        Expanded(
-          child: ListView.builder(
-            itemCount: 10,
-            itemBuilder: (context, index) {
-              return InkWell(
-                onTap: () {
-                  Get.to(DetailsPage());
-                },
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5.0),
-                  child: const ItemBestSellerListView(),
-                ),
-              );
-            },
+    return ListView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: 20,
+      itemBuilder: (context, index) {
+        return InkWell(
+          onTap: () {
+            Get.to(DetailsPage());
+          },
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5.0),
+            child: const ItemBestSellerListView(),
           ),
-        ),
-      ],
+        );
+      },
     );
   }
 }

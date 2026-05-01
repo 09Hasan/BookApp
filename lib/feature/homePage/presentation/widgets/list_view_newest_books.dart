@@ -16,6 +16,7 @@ class ListViewNewestBooks extends StatelessWidget {
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.3,
         child: ListView.builder(
+          padding: EdgeInsets.zero,
           itemCount: 10,
           scrollDirection: Axis.horizontal,
 

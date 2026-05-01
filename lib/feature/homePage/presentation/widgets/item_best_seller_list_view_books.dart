@@ -1,7 +1,9 @@
 import 'package:booklyapp/constants.dart';
+import 'package:booklyapp/core/utils/styles.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/book_rating.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemBestSellerListView extends StatelessWidget {
   const ItemBestSellerListView({super.key});
@@ -11,44 +13,48 @@ class ItemBestSellerListView extends StatelessWidget {
     return SizedBox(
       height: 175,
       child: Row(
-        children: const [
+        children: [
           ItemListView(),
           Expanded(
-            child: Column(
-              children: [
-                Expanded(
-                  child: ListTile(
-                    titleAlignment: ListTileTitleAlignment.top,
-                    title: Text(
-                      'titlehfj,',
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 32,
-                        fontFamily: kGTSectraFontFamily,
-                      ),
-                    ),
-                    subtitle: Text(
-                      'subtitle',
-                      // style: Theme.of(context).textTheme.bodyMedium,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+
+                children: [
+                  Text(
+                    'Harry Potter and the Goblet of Fire',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.textStyle25.copyWith(
+                      fontFamily: kGTSectraFontFamily,
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    left: 16,
-                    right: 24,
-                    bottom: 16,
+                  const SizedBox(height: 3),
+                  Text(
+                    'J.K. Rowling',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: Styles.textStyle18.copyWith(color: Colors.white70),
                   ),
-                  child: Row(
+                  const SizedBox(height: 3),
+
+                  Row(
                     children: [
-                      Text('Price: \$19.99'),
-                      Spacer(flex: 1),
-                      BookRating(),
+                      Text(
+                        '19.99 €',
+                        style: Styles.textStyle25.copyWith(
+                          fontWeight: FontWeight.w900,
+                          fontFamily: GoogleFonts.montserrat.toString(),
+                        ),
+                      ),
+                      const Spacer(flex: 1),
+                      const BookRating(),
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
