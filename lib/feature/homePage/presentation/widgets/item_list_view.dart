@@ -1,4 +1,4 @@
-import 'package:booklyapp/core/utils/data_assets.dart';
+import 'package:booklyapp/core/utils/assets_data.dart';
 import 'package:flutter/material.dart';
 
 class ItemListView extends StatelessWidget {
@@ -13,7 +13,7 @@ class ItemListView extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           color: Colors.red,
           image: const DecorationImage(
-            image: AssetImage(DataAssets.kLogo),
+            image: AssetImage(AssetsData.kLogo),
             fit: BoxFit.contain,
           ),
         ),

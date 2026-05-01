@@ -1,5 +1,5 @@
 import 'package:booklyapp/constants.dart';
-import 'package:booklyapp/core/utils/data_assets.dart';
+import 'package:booklyapp/core/utils/assets_data.dart';
 import 'package:booklyapp/core/utils/styles.dart';
 import 'package:booklyapp/core/widgets/custom_app_bar.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/list_view_newest_books.dart';
@@ -24,7 +24,7 @@ class BodyHomePage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: kPadding),
                   child: CustomAppBar(
-                    title: Image.asset(DataAssets.kLogo, height: kPadding),
+                    title: Image.asset(AssetsData.kLogo, height: kPadding),
                     icon: Icons.search,
                     onPressed: () {},
                   ),
