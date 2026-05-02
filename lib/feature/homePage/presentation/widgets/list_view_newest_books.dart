@@ -1,8 +1,8 @@
 import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/picture_book.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:get/state_manager.dart';
+// import 'package:get/get_navigation/src/extension_navigation.dart';
+// import 'package:get/state_manager.dart';
 
 class ListViewNewestBooks extends StatelessWidget {
   const ListViewNewestBooks({super.key});
@@ -11,7 +11,7 @@ class ListViewNewestBooks extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Get.to(DetailsPage());
+        // Get.to(DetailsPage());
       },
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.3,

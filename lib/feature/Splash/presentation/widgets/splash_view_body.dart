@@ -3,7 +3,7 @@ import 'package:booklyapp/feature/Splash/presentation/widgets/sliding_text.dart'
 import 'package:booklyapp/feature/homePage/presentation/view/home_page.dart';
 // import 'package:booklyapp/feature/Splash/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+// import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -31,9 +31,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
-    Duration(seconds: 3).delay().then((context) {
-      debugPrint('Go to Home View');
-    });
+    // Duration(seconds: 3).delay().then((context) {
+    //   debugPrint('Go to Home View');
+    // });
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -66,7 +66,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void transtionToHomePage() {
     Future.delayed(kTranstionDuration, () {
-      Get.to(HomePage(), transition: Transition.downToUp);
+      // Get.to(HomePage(), transition: Transition.downToUp);
       // Navigator.pop(context);
     });
   }
