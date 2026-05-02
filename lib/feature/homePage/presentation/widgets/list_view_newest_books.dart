@@ -1,5 +1,5 @@
 import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/picture_book.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/state_manager.dart';
@@ -25,7 +25,7 @@ class ListViewNewestBooks extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: Stack(
                 children: [
-                  const ItemListView(),
+                  const PictureBook(),
                   Positioned(
                     right: 10,
                     bottom: 5,

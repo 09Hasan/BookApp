@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/item_list_view.dart';
+import 'package:booklyapp/feature/homePage/presentation/widgets/picture_book.dart';
 
 class ListViewSmaller extends StatelessWidget {
   const ListViewSmaller({super.key});
@@ -14,7 +14,7 @@ class ListViewSmaller extends StatelessWidget {
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
-            child: AspectRatio(aspectRatio: 2.4 / 3.8, child: ItemListView()),
+            child: AspectRatio(aspectRatio: 2.4 / 3.8, child: PictureBook()),
           );
         },
       ),

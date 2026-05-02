@@ -13,31 +13,38 @@ class BodyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
+        
         slivers: [
           SliverToBoxAdapter(
+            
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const SizedBox(height: 40),
+                const SizedBox(height: kPaddingVertical),
                 //appbar
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: kPadding),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: kPaddingHorizontal,
+                  ),
                   child: CustomAppBar(
-                    title: Image.asset(AssetsData.kLogo, height: kPadding),
+                    title: Image.asset(
+                      AssetsData.kLogo,
+                      height: kPaddingHorizontal,
+                    ),
                     icon: Icons.search,
                     onPressed: () {},
                   ),
                 ),
                 //List View Newest Books
                 Padding(
-                  padding: const EdgeInsets.only(left: kPadding),
+                  padding: const EdgeInsets.only(left: kPaddingHorizontal),
                   child: const ListViewNewestBooks(),
                 ),
                 const SizedBox(height: 50),
                 //Text
                 Padding(
-                  padding: const EdgeInsets.only(left: kPadding),
+                  padding: const EdgeInsets.only(left: kPaddingHorizontal),
                   child: Text(
                     textAlign: TextAlign.start,
                     'Best Seller',
@@ -50,7 +57,9 @@ class BodyHomePage extends StatelessWidget {
           ),
 
           const SliverPadding(
-            padding: EdgeInsetsGeometry.symmetric(horizontal: kPadding),
+            padding: EdgeInsetsGeometry.symmetric(
+              horizontal: kPaddingHorizontal,
+            ),
             sliver: SliverListBestSeller(),
           ),
         ],
