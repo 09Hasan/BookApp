@@ -25,6 +25,7 @@ class CustomActionButton extends StatelessWidget {
         onPressed: onPressed,
 
         style: TextButton.styleFrom(
+          textStyle: textStyle,
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
           backgroundColor: backgroundColor,
         ),

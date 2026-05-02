@@ -1,3 +1,4 @@
+import 'package:booklyapp/core/utils/styles.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/custom_action_button.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class BooksAction extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 32),
       child: Row(
         children: [
-          const Expanded(
+          Expanded(
             child: CustomActionButton(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(16),
@@ -18,14 +19,13 @@ class BooksAction extends StatelessWidget {
               ),
               backgroundColor: Colors.white,
               title: '19.99\$',
-              textStyle: TextStyle(
+              textStyle: Styles.textStyle25.copyWith(
                 color: Colors.black,
-                fontSize: 28,
                 fontWeight: FontWeight.bold,
               ),
             ),
           ),
-          const Expanded(
+          Expanded(
             child: CustomActionButton(
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(16),
@@ -33,10 +33,8 @@ class BooksAction extends StatelessWidget {
               ),
               backgroundColor: Colors.orangeAccent,
               title: 'Buy',
-              textStyle: TextStyle(
+              textStyle: Styles.textStyle25.copyWith(
                 color: Colors.white,
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
               ),
             ),
           ),
