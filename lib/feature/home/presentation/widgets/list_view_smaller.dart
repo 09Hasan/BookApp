@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/picture_book.dart';
+import 'package:booklyapp/feature/home/presentation/widgets/picture_book.dart';
 
 class ListViewSmaller extends StatelessWidget {
   const ListViewSmaller({super.key});

@@ -2,11 +2,11 @@ import 'package:booklyapp/constants.dart';
 // import 'package:booklyapp/core/utils/styles.dart';
 // import 'package:booklyapp/core/widgets/custom_app_bar.dart';
 // import 'package:booklyapp/feature/homePage/presentation/widgets/book_rating.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/books_action.dart';
+import 'package:booklyapp/feature/home/presentation/widgets/books_action.dart';
 // import 'package:booklyapp/feature/homePage/presentation/widgets/list_view_smaller.dart';
 // import 'package:booklyapp/feature/homePage/presentation/widgets/picture_book.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/section_book_details.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/section_similar_book.dart';
+import 'package:booklyapp/feature/home/presentation/widgets/section_book_details.dart';
+import 'package:booklyapp/feature/home/presentation/widgets/section_similar_book.dart';
 import 'package:flutter/material.dart';
 
 class BodyDetailsPage extends StatelessWidget {

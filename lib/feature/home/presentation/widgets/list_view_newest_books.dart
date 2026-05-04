@@ -1,6 +1,6 @@
 // import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
 import 'package:booklyapp/core/utils/app_router.dart';
-import 'package:booklyapp/feature/homePage/presentation/widgets/picture_book.dart';
+import 'package:booklyapp/feature/home/presentation/widgets/picture_book.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 // import 'package:get/get_navigation/src/extension_navigation.dart';
