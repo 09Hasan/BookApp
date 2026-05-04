@@ -1,10 +1,12 @@
 import 'package:booklyapp/constants.dart';
+import 'package:booklyapp/core/utils/app_router.dart';
 import 'package:booklyapp/core/utils/assets_data.dart';
 import 'package:booklyapp/core/utils/styles.dart';
 import 'package:booklyapp/core/widgets/custom_app_bar.dart';
 import 'package:booklyapp/feature/home/presentation/widgets/list_view_newest_books.dart';
 import 'package:booklyapp/feature/home/presentation/widgets/sliver_list_best_seller.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class BodyHomePage extends StatelessWidget {
   const BodyHomePage({super.key});
@@ -13,10 +15,8 @@ class BodyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        
         slivers: [
           SliverToBoxAdapter(
-            
             child: Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -33,7 +33,9 @@ class BodyHomePage extends StatelessWidget {
                       height: kPaddingHorizontal,
                     ),
                     icon: Icons.search,
-                    onPressed: () {},
+                    onPressed: () {
+                      GoRouter.of(context).push(AppRouter.kSearchView);
+                    },
                   ),
                 ),
                 //List View Newest Books
