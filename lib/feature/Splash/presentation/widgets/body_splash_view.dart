@@ -5,14 +5,14 @@ import 'package:booklyapp/feature/Splash/presentation/widgets/sliding_text.dart'
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
 
-class SplashViewBody extends StatefulWidget {
-  const SplashViewBody({super.key});
+class BodySplashView extends StatefulWidget {
+  const BodySplashView({super.key});
 
   @override
-  State<SplashViewBody> createState() => _SplashViewBodyState();
+  State<BodySplashView> createState() => _BodySplashViewState();
 }
 
-class _SplashViewBodyState extends State<SplashViewBody>
+class _BodySplashViewState extends State<BodySplashView>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingText;
@@ -26,6 +26,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void dispose() {
     animationController.dispose();
+    // Navigator.pop(context);
+
     super.dispose();
   }
 
@@ -36,6 +38,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
     // });
     Future.delayed(kTranstionDuration, () {
       // Navigator.push(context, (route))
+      // Navigator.push(
+      //   // ignore: use_build_context_synchronously
+      //   context,
+      //   MaterialPageRoute(builder: (context) => HomePage()),
+      // );
     });
     // Duration(seconds: 3);
     return Column(
