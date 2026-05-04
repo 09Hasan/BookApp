@@ -33,9 +33,7 @@ class BooksAction extends StatelessWidget {
               ),
               backgroundColor: Colors.orangeAccent,
               title: 'Buy',
-              textStyle: Styles.textStyle25.copyWith(
-                color: Colors.white,
-              ),
+              textStyle: Styles.textStyle25.copyWith(color: Colors.white),
             ),
           ),
         ],

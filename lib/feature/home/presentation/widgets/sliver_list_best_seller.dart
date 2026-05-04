@@ -30,25 +30,24 @@ class SliverListBestSeller extends StatelessWidget {
   }
 }
 
-  //  body: Padding(
-  //       padding: const EdgeInsets.symmetric(horizontal: 24),
-  //       child: Column(
-  //         children: [
-  //           const SizedBox(height: 40),
-  //           //must to create anthor Custom appbar
-  //           CustomAppBar(
-  //             title: Image.asset(DataAssets.kLogo, height: 30),
-  //             icon: Icons.search,
-  //             onPressed: () {},
-  //           ),
+//  body: Padding(
+//       padding: const EdgeInsets.symmetric(horizontal: 24),
+//       child: Column(
+//         children: [
+//           const SizedBox(height: 40),
+//           //must to create anthor Custom appbar
+//           CustomAppBar(
+//             title: Image.asset(DataAssets.kLogo, height: 30),
+//             icon: Icons.search,
+//             onPressed: () {},
+//           ),
 
-  //           const SizedBox(height: 16),
+//           const SizedBox(height: 16),
 
-  //           const ListViewNewestBooks(),
-  //           const SizedBox(height: 16),
-  //           const ListViewBestSeller(),
-           
-  //         ],
-  //       ),
-  //     ),
-   
+//           const ListViewNewestBooks(),
+//           const SizedBox(height: 16),
+//           const ListViewBestSeller(),
+
+//         ],
+//       ),
+//     ),
