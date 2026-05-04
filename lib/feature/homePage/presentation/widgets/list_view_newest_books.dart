@@ -1,6 +1,8 @@
 // import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
+import 'package:booklyapp/core/utils/app_router.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/picture_book.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 // import 'package:get/get_navigation/src/extension_navigation.dart';
 // import 'package:get/state_manager.dart';
 
@@ -9,20 +11,20 @@ class ListViewNewestBooks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        // Get.to(DetailsPage());
-      },
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.3,
-        child: ListView.builder(
-          padding: EdgeInsets.zero,
-          itemCount: 10,
-          scrollDirection: Axis.horizontal,
+    return SizedBox(
+      height: MediaQuery.of(context).size.height * 0.3,
+      child: ListView.builder(
+        padding: EdgeInsets.zero,
+        itemCount: 10,
+        scrollDirection: Axis.horizontal,
 
-          itemBuilder: (context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: InkWell(
+              onTap: () {
+                GoRouter.of(context).push(AppRouter.kDetailsView);
+              },
               child: Stack(
                 children: [
                   const PictureBook(),
@@ -44,9 +46,9 @@ class ListViewNewestBooks extends StatelessWidget {
                   ),
                 ],
               ),
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
     );
   }

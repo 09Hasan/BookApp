@@ -1,6 +1,8 @@
 // import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
+import 'package:booklyapp/core/utils/app_router.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_best_seller_list_view_books.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 // import 'package:get/get_core/src/get_main.dart';
 // import 'package:get/get_navigation/src/extension_navigation.dart';
 
@@ -13,6 +15,8 @@ class SliverListBestSeller extends StatelessWidget {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
+            GoRouter.of(context).push(AppRouter.kDetailsView);
+
             // Get.to(DetailsPage());
           },
           child: Padding(
