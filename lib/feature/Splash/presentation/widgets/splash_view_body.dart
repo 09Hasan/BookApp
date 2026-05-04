@@ -1,6 +1,6 @@
 import 'package:booklyapp/constants.dart';
 import 'package:booklyapp/feature/Splash/presentation/widgets/sliding_text.dart';
-import 'package:booklyapp/feature/homePage/presentation/view/home_page.dart';
+// import 'package:booklyapp/feature/homePage/presentation/view/home_page.dart';
 // import 'package:booklyapp/feature/Splash/presentation/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get.dart';
@@ -34,6 +34,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     // Duration(seconds: 3).delay().then((context) {
     //   debugPrint('Go to Home View');
     // });
+    Future.delayed(kTranstionDuration, () {
+      // Navigator.push(context, (route))
+    });
+    // Duration(seconds: 3);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,

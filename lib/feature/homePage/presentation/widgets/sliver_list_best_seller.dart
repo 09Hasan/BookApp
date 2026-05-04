@@ -1,4 +1,4 @@
-import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
+// import 'package:booklyapp/feature/homePage/presentation/view/details_page.dart';
 import 'package:booklyapp/feature/homePage/presentation/widgets/item_best_seller_list_view_books.dart';
 import 'package:flutter/material.dart';
 // import 'package:get/get_core/src/get_main.dart';
